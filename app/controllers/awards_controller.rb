@@ -43,7 +43,7 @@ class AwardsController < ApplicationController
   # POST /awards
   # POST /awards.json
   def create
-    @award = Award.new(params[:award])
+    @award = Award.new(params[:transaction_id])
 
     respond_to do |format|
       if @award.save
@@ -83,4 +83,5 @@ class AwardsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 end
