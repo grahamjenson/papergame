@@ -68,6 +68,7 @@ GEM
     ejs (1.1.1)
     erubis (2.7.0)
     eventmachine (1.0.0)
+    excon (0.16.10)
     execjs (1.4.0)
       multi_json (~> 1.0)
     factory_girl (4.1.0)
@@ -86,6 +87,11 @@ GEM
       coffee-script (>= 1.0.0)
       sprockets (>= 2.0.3)
       tilt (>= 1.3.3)
+    heroku-api (0.3.8)
+      excon (~> 0.16.10)
+    heroku_san (4.2.5)
+      heroku-api (>= 0.1.2)
+      rake
     hike (1.2.1)
     httparty (0.4.3)
       crack (>= 0.1.1)
@@ -182,6 +188,7 @@ DEPENDENCIES
   factory_girl_rails
   haml-rails
   haml_coffee_assets
+  heroku_san
   httparty
   jquery-rails
   oj
