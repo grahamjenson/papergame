@@ -1,0 +1,1 @@
+class Papergame.Collections.Award extends Backbone.Collection

@@ -1,3 +1,6 @@
 class Award < ActiveRecord::Base
-  attr_accessible :complete, :description, :image, :retailer_id, :title, :user_id
+  belongs_to :retailer
+  belongs_to :user
+
+  attr_accessible :complete, :description, :image, :title
 end
