@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Award:
+  = @award_template.award_id
+%p
+  %b Title:
+  = @award_template.title
+%p
+  %b Description:
+  = @award_template.description
+%p
+  %b Image:
+  = @award_template.image
+
+= link_to 'Edit', edit_award_template_path(@award_template)
+\|
+= link_to 'Back', award_templates_path

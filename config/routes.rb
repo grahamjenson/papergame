@@ -1,4 +1,7 @@
 Papergame::Application.routes.draw do
+  resources :award_templates
+
+
   resources :awards
 
 

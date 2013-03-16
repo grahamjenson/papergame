@@ -1,0 +1,25 @@
+%h1 Listing award_templates
+
+%table
+  %tr
+    %th Award
+    %th Title
+    %th Description
+    %th Image
+    %th
+    %th
+    %th
+
+  - @award_templates.each do |award_template|
+    %tr
+      %td= award_template.award_id
+      %td= award_template.title
+      %td= award_template.description
+      %td= award_template.image
+      %td= link_to 'Show', award_template
+      %td= link_to 'Edit', edit_award_template_path(award_template)
+      %td= link_to 'Destroy', award_template, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Award template', new_award_template_path
