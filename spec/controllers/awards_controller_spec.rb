@@ -18,23 +18,29 @@ describe AwardsController do
   before(:each) do
     @params =
       {
-        "id" => "123456789",
-        # "transaction_id" => "cf54e2cc-58cc-4372-a567-0e02b2c3d479",
-        "push" => {
-          "title" => "Award Name",
-          "description" => "Just got 10 coffees"
-        },
-        "user" => {
-          "user_id" => "12345"
-          # "identifiers" => [
-          #   "flybuys", "airnz"
-          # ],
-        # "identifier": {Identifier model}, # If a receipt is attached to receipt
-        # "receipt": {Receipt model}, # If a receipt is attached to push notification trigger
-        # "datetime" => "20121001053412"
-        }
-      # }.to_json
-    }
+        user_id: "#{user.id}",
+        title: "Free Coffee",
+        description: "Just got 10 coffees, here's a free one",
+        retailer_id: "1"
+      }
+      
+      # Given by Alex
+      # {
+      #   # "transaction_id" => "cf54e2cc-58cc-4372-a567-0e02b2c3d479",
+      #   "push" => {
+      #     "title" => "Free Coffee",
+      #     "description" => "Just got 10 coffees, here's a free one"
+      #   },
+      #   "user" => {
+      #     "user_id" => "12345"
+      #     # "identifiers" => [
+      #     #   "flybuys", "airnz"
+      #     # ],
+      #   # "identifier": {Identifier model}, # If a receipt is attached to receipt
+      #   # "receipt": {Receipt model}, # If a receipt is attached to push notification trigger
+      #   # "datetime" => "20121001053412"
+      #   }
+      # }
   end
 
  it "should create from hash and render nothing" do

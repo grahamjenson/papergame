@@ -43,17 +43,10 @@ class AwardsController < ApplicationController
   # POST /awards
   # POST /awards.json
   def create
-    @award = Award.new(params[:transaction_id])
-
-    respond_to do |format|
-      if @award.save
-        format.html { redirect_to @award, notice: 'Award was successfully created.' }
-        format.json { render json: @award, status: :created, location: @award }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @award.errors, status: :unprocessable_entity }
-      end
-    end
+    # @award = Award.new(params[:transaction_id])
+    @award = Award.new(user_id: params[:user_id], title: params[:title])
+    @award.save
+    render nothing: true, status: 200
   end
 
   # PUT /awards/1
