@@ -1,7 +1,7 @@
 class AwardsController < ApplicationController
 
   before_filter :authenticate_user!
-  
+
   # GET /awards
   # GET /awards.json
   def index
@@ -43,7 +43,7 @@ class AwardsController < ApplicationController
   # POST /awards
   # POST /awards.json
   def create
-    @award = Award.new(params[:award])
+    @award = Award.create(name: params[:push][:name], )
 
     respond_to do |format|
       if @award.save

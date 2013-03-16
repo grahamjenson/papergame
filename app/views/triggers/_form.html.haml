@@ -6,5 +6,39 @@
         - @trigger.errors.full_messages.each do |msg|
           %li= msg
 
+  .field
+    = f.label :name, 'Name*'
+    = f.text_field :name
+  .field
+    = f.label :description, 'Description*'
+    = f.text_field :description
+  .field
+    = f.label :retailer_id, 'Retailer ID*'
+    = f.text_field :retailer_id
+  .field
+    = f.label :shop_id
+    = f.text_field :shop_id
+  .field
+    = f.label :pos_id
+    = f.text_field :pos_id
+  .field
+    = f.label :legals, 'Legals*'
+    = f.text_field :legals
+  .field
+    = f.label :date_to
+    = f.date_select :date_to
+  .field
+    = f.label :date_from
+    = f.date_select :date_from
+  .field
+    = f.label :code
+    = f.text_field :code
+  .field
+    = f.label :rule, 'Rule*'
+    = f.text_area :rule
+  .field
+    = f.label :action, 'Action*'
+    = f.text_area :action
+
   .actions
     = f.submit 'Save'
