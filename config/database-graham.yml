@@ -14,7 +14,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: papergame_dev
+  database: papergame_test
   pool: 5
   username: gdjenson
   password:

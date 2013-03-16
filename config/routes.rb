@@ -17,6 +17,9 @@ Papergame::Application.routes.draw do
   devise_for :users
 
   match 'users/:token_id/sign_up' => 'users#sign_up'
+  
+
+  resources :triggers
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
