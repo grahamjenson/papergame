@@ -1,0 +1,33 @@
+%p#notice= notice
+
+%p
+  %b Retailer:
+  = @retailer.retailer_id
+%p
+  %b Name:
+  = @retailer.name
+%p
+  %b Prefix:
+  = @retailer.prefix
+%p
+  %b Phone1:
+  = @retailer.phone1
+%p
+  %b Phone2:
+  = @retailer.phone2
+%p
+  %b Fax:
+  = @retailer.fax
+%p
+  %b Email:
+  = @retailer.email
+%p
+  %b Website:
+  = @retailer.website
+%p
+  %b Country:
+  = @retailer.country
+
+= link_to 'Edit', edit_retailer_path(@retailer)
+\|
+= link_to 'Back', retailers_path

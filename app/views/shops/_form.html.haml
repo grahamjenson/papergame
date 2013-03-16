@@ -1,0 +1,64 @@
+= form_for @shop do |f|
+  - if @shop.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@shop.errors.count, "error")} prohibited this shop from being saved:"
+      %ul
+        - @shop.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :retailer_id
+    = f.text_field :retailer_id
+  .field
+    = f.label :shop_id
+    = f.text_field :shop_id
+  .field
+    = f.label :category
+    = f.text_field :category
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :tax_id
+    = f.text_field :tax_id
+  .field
+    = f.label :geo_lon
+    = f.text_field :geo_lon
+  .field
+    = f.label :geo_lat
+    = f.text_field :geo_lat
+  .field
+    = f.label :phone1
+    = f.text_field :phone1
+  .field
+    = f.label :phone2
+    = f.text_field :phone2
+  .field
+    = f.label :fax
+    = f.text_field :fax
+  .field
+    = f.label :email
+    = f.text_field :email
+  .field
+    = f.label :website
+    = f.text_field :website
+  .field
+    = f.label :address_street
+    = f.text_field :address_street
+  .field
+    = f.label :address_street2
+    = f.text_field :address_street2
+  .field
+    = f.label :address_suburb
+    = f.text_field :address_suburb
+  .field
+    = f.label :address_city
+    = f.text_field :address_city
+  .field
+    = f.label :address_postcode
+    = f.text_field :address_postcode
+  .field
+    = f.label :address_country
+    = f.text_field :address_country
+  .actions
+    = f.submit 'Save'

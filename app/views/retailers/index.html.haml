@@ -1,0 +1,35 @@
+%h1 Listing retailers
+
+%table
+  %tr
+    %th Retailer
+    %th Name
+    %th Prefix
+    %th Phone1
+    %th Phone2
+    %th Fax
+    %th Email
+    %th Website
+    %th Country
+    %th
+    %th
+    %th
+
+  - @retailers.each do |retailer|
+    %tr
+      %td= retailer.retailer_id
+      %td= retailer.name
+      %td= retailer.prefix
+      %td= retailer.phone1
+      %td= retailer.phone2
+      %td= retailer.fax
+      %td= retailer.email
+      %td= retailer.website
+      %td= retailer.country
+      %td= link_to 'Show', retailer
+      %td= link_to 'Edit', edit_retailer_path(retailer)
+      %td= link_to 'Destroy', retailer, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Retailer', new_retailer_path

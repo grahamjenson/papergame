@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Identifier:
+  = @identifier.identifier_id
+%p
+  %b Type token:
+  = @identifier.type_token
+%p
+  %b Issuer:
+  = @identifier.issuer
+%p
+  %b Value:
+  = @identifier.value
+%p
+  %b Display:
+  = @identifier.display
+
+= link_to 'Edit', edit_identifier_path(@identifier)
+\|
+= link_to 'Back', identifiers_path

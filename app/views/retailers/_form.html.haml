@@ -1,0 +1,37 @@
+= form_for @retailer do |f|
+  - if @retailer.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@retailer.errors.count, "error")} prohibited this retailer from being saved:"
+      %ul
+        - @retailer.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :retailer_id
+    = f.text_field :retailer_id
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :prefix
+    = f.text_field :prefix
+  .field
+    = f.label :phone1
+    = f.text_field :phone1
+  .field
+    = f.label :phone2
+    = f.text_field :phone2
+  .field
+    = f.label :fax
+    = f.text_field :fax
+  .field
+    = f.label :email
+    = f.text_field :email
+  .field
+    = f.label :website
+    = f.text_field :website
+  .field
+    = f.label :country
+    = f.text_field :country
+  .actions
+    = f.submit 'Save'

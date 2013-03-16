@@ -1,0 +1,35 @@
+%h1 Listing receipts
+
+%table
+  %tr
+    %th Receipt
+    %th Date time
+    %th Retailer
+    %th Shop
+    %th Pos
+    %th Tax total
+    %th Cost total
+    %th Currency
+    %th Notes
+    %th
+    %th
+    %th
+
+  - @receipts.each do |receipt|
+    %tr
+      %td= receipt.receipt_id
+      %td= receipt.date_time
+      %td= receipt.retailer_id
+      %td= receipt.shop_id
+      %td= receipt.pos_id
+      %td= receipt.tax_total
+      %td= receipt.cost_total
+      %td= receipt.currency
+      %td= receipt.notes
+      %td= link_to 'Show', receipt
+      %td= link_to 'Edit', edit_receipt_path(receipt)
+      %td= link_to 'Destroy', receipt, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Receipt', new_receipt_path

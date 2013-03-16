@@ -1,0 +1,60 @@
+%p#notice= notice
+
+%p
+  %b Retailer:
+  = @shop.retailer_id
+%p
+  %b Shop:
+  = @shop.shop_id
+%p
+  %b Category:
+  = @shop.category
+%p
+  %b Name:
+  = @shop.name
+%p
+  %b Tax:
+  = @shop.tax_id
+%p
+  %b Geo lon:
+  = @shop.geo_lon
+%p
+  %b Geo lat:
+  = @shop.geo_lat
+%p
+  %b Phone1:
+  = @shop.phone1
+%p
+  %b Phone2:
+  = @shop.phone2
+%p
+  %b Fax:
+  = @shop.fax
+%p
+  %b Email:
+  = @shop.email
+%p
+  %b Website:
+  = @shop.website
+%p
+  %b Address street:
+  = @shop.address_street
+%p
+  %b Address street2:
+  = @shop.address_street2
+%p
+  %b Address suburb:
+  = @shop.address_suburb
+%p
+  %b Address city:
+  = @shop.address_city
+%p
+  %b Address postcode:
+  = @shop.address_postcode
+%p
+  %b Address country:
+  = @shop.address_country
+
+= link_to 'Edit', edit_shop_path(@shop)
+\|
+= link_to 'Back', shops_path

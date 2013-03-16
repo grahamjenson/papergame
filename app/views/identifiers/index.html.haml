@@ -1,0 +1,27 @@
+%h1 Listing identifiers
+
+%table
+  %tr
+    %th Identifier
+    %th Type token
+    %th Issuer
+    %th Value
+    %th Display
+    %th
+    %th
+    %th
+
+  - @identifiers.each do |identifier|
+    %tr
+      %td= identifier.identifier_id
+      %td= identifier.type_token
+      %td= identifier.issuer
+      %td= identifier.value
+      %td= identifier.display
+      %td= link_to 'Show', identifier
+      %td= link_to 'Edit', edit_identifier_path(identifier)
+      %td= link_to 'Destroy', identifier, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Identifier', new_identifier_path

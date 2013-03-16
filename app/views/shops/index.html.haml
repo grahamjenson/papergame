@@ -1,0 +1,53 @@
+%h1 Listing shops
+
+%table
+  %tr
+    %th Retailer
+    %th Shop
+    %th Category
+    %th Name
+    %th Tax
+    %th Geo lon
+    %th Geo lat
+    %th Phone1
+    %th Phone2
+    %th Fax
+    %th Email
+    %th Website
+    %th Address street
+    %th Address street2
+    %th Address suburb
+    %th Address city
+    %th Address postcode
+    %th Address country
+    %th
+    %th
+    %th
+
+  - @shops.each do |shop|
+    %tr
+      %td= shop.retailer_id
+      %td= shop.shop_id
+      %td= shop.category
+      %td= shop.name
+      %td= shop.tax_id
+      %td= shop.geo_lon
+      %td= shop.geo_lat
+      %td= shop.phone1
+      %td= shop.phone2
+      %td= shop.fax
+      %td= shop.email
+      %td= shop.website
+      %td= shop.address_street
+      %td= shop.address_street2
+      %td= shop.address_suburb
+      %td= shop.address_city
+      %td= shop.address_postcode
+      %td= shop.address_country
+      %td= link_to 'Show', shop
+      %td= link_to 'Edit', edit_shop_path(shop)
+      %td= link_to 'Destroy', shop, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Shop', new_shop_path

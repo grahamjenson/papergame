@@ -1,0 +1,33 @@
+%p#notice= notice
+
+%p
+  %b Receipt:
+  = @receipt.receipt_id
+%p
+  %b Date time:
+  = @receipt.date_time
+%p
+  %b Retailer:
+  = @receipt.retailer_id
+%p
+  %b Shop:
+  = @receipt.shop_id
+%p
+  %b Pos:
+  = @receipt.pos_id
+%p
+  %b Tax total:
+  = @receipt.tax_total
+%p
+  %b Cost total:
+  = @receipt.cost_total
+%p
+  %b Currency:
+  = @receipt.currency
+%p
+  %b Notes:
+  = @receipt.notes
+
+= link_to 'Edit', edit_receipt_path(@receipt)
+\|
+= link_to 'Back', receipts_path
