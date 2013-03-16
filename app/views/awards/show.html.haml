@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b User:
+  = @award.user_id
+%p
+  %b Complete:
+  = @award.complete
+%p
+  %b Retailer:
+  = @award.retailer_id
+%p
+  %b Description:
+  = @award.description
+%p
+  %b Title:
+  = @award.title
+%p
+  %b Image:
+  = @award.image
+
+= link_to 'Edit', edit_award_path(@award)
+\|
+= link_to 'Back', awards_path
