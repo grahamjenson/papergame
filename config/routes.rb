@@ -16,6 +16,8 @@ Papergame::Application.routes.draw do
 
   devise_for :users
 
+  resources :triggers
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
