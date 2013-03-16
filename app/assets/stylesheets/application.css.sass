@@ -1,1 +1,42 @@
 @import "bootstrap"
+@import "lavish"
+
+@import "compass"
+@import "compass/css3"
+@import "compass/utilities/lists"
+@import "compass/css3/box-shadow"
+
+
+$GREEN: #70b579
+$LIGHTERGREY: #eeeeee
+$LIGHTGREY: #b2b2b2
+$DARKGREY: #646464
+
+body
+  font-family: Gudea, Helvetica, Arial, Trebuchet MS, Verdana, sans-serif !important
+
+@linkColor: @orange
+
+.header
+  margin-top: 50px
+  margin-bottom: 35px
+  .icon
+  h1
+    margin-top: 34px
+    color: $DARKGREY
+    font-size: 4em
+    font-weight: 400
+
+  p
+    color: $LIGHTGREY
+    font-size: 2em
+
+.form
+  background: $LIGHTERGREY
+  @include box-shadow(rgba(black, 0.4) 5px 5px 5px, rgba(black, 0.5) 0 0 5px)
+  .form_header
+    h3
+      text-align: right
+  input
+    margin-left: 10px
+    width: 95%

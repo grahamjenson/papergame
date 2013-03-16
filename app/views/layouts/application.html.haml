@@ -1,0 +1,36 @@
+!!!
+%html
+  %head
+    %title Papergame
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    %link(href='http://fonts.googleapis.com/css?family=Gudea' rel='stylesheet' type='text/css')
+    = csrf_meta_tags
+
+  %body
+    .container
+      .header
+        .row
+          .span2.icon
+            %img{src: '/assets/logo.png'}
+          .span8
+            %h1
+              PAPERGAME
+            %p
+              MAKING CONSUMERISM A GAME
+      #js-nav
+      .row
+        .span12
+          %ul.nav.nav-pills
+            %li.active#js-home-tab
+              %a{href: "#home"} Home
+            %li#js-faq-tab
+              %a{href: "#faq"} FAQ
+            %li#js-contact-tab
+              %a{href: "#contact"} Contact
+      %hr
+
+      = yield
+
+      .footer
+
