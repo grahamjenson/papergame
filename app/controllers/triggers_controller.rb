@@ -1,4 +1,6 @@
 class TriggersController < ApplicationController
+
+  before_filter :authenticate_user!
   # GET /triggers
   # GET /triggers.json
   def index
