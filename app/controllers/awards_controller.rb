@@ -44,8 +44,9 @@ class AwardsController < ApplicationController
   # POST /awards.json
   def create
     # @award = Award.new(params[:transaction_id])
-    @award = Award.new(user_id: params[:user_id], title: params[:title])
-    @award.save
+    # @award = Award.new(user_id: params[:user_id], title: params[:title])
+    @award = Award.create_from_webhook_params(params)
+    # @award.save # already saved in the model
     render nothing: true, status: 200
   end
 
