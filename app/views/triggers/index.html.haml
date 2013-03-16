@@ -1,0 +1,17 @@
+%h1 Listing triggers
+
+%table
+  %tr
+    %th
+    %th
+    %th
+
+  - @triggers.each do |trigger|
+    %tr
+      %td= link_to 'Show', trigger
+      %td= link_to 'Edit', edit_trigger_path(trigger)
+      %td= link_to 'Destroy', trigger, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Trigger', new_trigger_path
