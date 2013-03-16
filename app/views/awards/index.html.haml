@@ -1,16 +1,15 @@
 %h1 Listing awards
 
-%table
-  %tr
-    %th User
-    %th Complete
-    %th Retailer
-    %th Description
-    %th Title
-    %th Image
-    %th
-    %th
-    %th
+.row
+  .span4
+    %img{src: asset_path('a1.jpg')}
+  .span4
+    %img{src: asset_path('a2.jpg')}
+  .span4
+    %img{src: asset_path('a3.jpg')}
+.row
+  .span4
+    %img{src: asset_path('a4.jpg')}
 
   - @awards.each do |award|
     %tr
